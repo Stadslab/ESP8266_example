@@ -1,5 +1,7 @@
  --init.lua
- wifi.sta.config("Free WiFi","jemoeder")
+ wifi.setmode(wifi.STATION)
+ --wifi.sta.config("Free WiFi","jemoeder")
+ wifi.sta.config("Stads-Lab","initialkey4iot")
  wifi.sta.connect()
  tmr.alarm(1, 1000, 1, function()
   if wifi.sta.getip()== nil then
